@@ -1,5 +1,5 @@
 # ewelink-plug
----
+
 Quick utility I wrote to use with the OctoPrint plugin PSU Control so that I can turn my 3D printer on and off using a smart plug that uses the eWeLink app for control. 
 
 To get started, clone this repo, make a copy of `.env.example` and rename it to `.env`, and enter your credentials. Region can be any of `us`, `eu`, or `cn`. This automatically operates on whatever the first device returned by [`ewelink-api`](https://github.com/skydiver/ewelink-api/) because it works for me (I only have one of these smart plugs). If you want me to change that, open an issue on GitHub.
