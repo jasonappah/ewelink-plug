@@ -16,7 +16,7 @@ const connection = new ewelink({
 	const device = devices[0]
 	const id = device["deviceid"]
 
-	console.log(id)
+	console.log(`Using device ID ${id}`)
 
 	if (myArgs[0] == 'on') {
 		if (device["params"]["switch"] == 'off') {
@@ -30,6 +30,7 @@ const connection = new ewelink({
 			console.log(status);
 		}
 	} else if (myArgs[0] == 'sense') {
+	console.log(device["params"]["switch"])
 	// this is for Octoprint plugin PSUControl. The exit code tells it whether the printer is on or off. Exit code 0 means it is on. Exit code 1 means it is off.
 		if (device["params"]["switch"] == 'on') {
 			process.exit(0)
