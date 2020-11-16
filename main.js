@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config({path: __dirname+"/.env"})
 const ewelink = require('ewelink-api');
 
 /* instantiate class */
@@ -41,7 +41,5 @@ const connection = new ewelink({
 		const usage = await connection.getDevicePowerUsage(id);
 	    console.log(usage);
 	}
-
-	
 
 })();
